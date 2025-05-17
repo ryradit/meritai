@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme (remains largely purple/magenta as a fallback or if explicitly switched) */
+    --background: 285 100% 98%; /* Very Pale Lavender/Pink */
+    --foreground: 270 50% 25%; /* Dark Purple */
+
+    --muted: 285 80% 94%; /* Pale Lavender/Pink */
+    --muted-foreground: 270 40% 55%; /* Muted Purple */
+
+    --popover: 0 0% 100%; 
+    --popover-foreground: 270 50% 25%;
+
+    --card: 285 100% 99%; 
+    --card-foreground: 270 50% 25%;
+
+    --border: 285 50% 90%; /* Lavender border */
+    --input: 285 50% 94%; /* Lavender input background */
+
+    --primary: 270 70% 60%; /* Central Purple */
+    --primary-foreground: 0 0% 100%; /* White for text on primary */
+
+    --secondary: 290 80% 93%; /* Lavender-Pink (between purple and magenta) */
+    --secondary-foreground: 290 60% 50%; /* Darker Lavender-Pink text */
+
+    --accent: 320 75% 60%; /* Vibrant Magenta/Fuchsia */
+    --accent-foreground: 0 0% 100%; /* White for text on accent */
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 270 70% 65%; /* Purple-based ring */
+
+    --radius: 0.5rem;
+
+    /* Sidebar variables, light theme */
+    --sidebar-background: 285 100% 97%; 
+    --sidebar-foreground: 270 50% 25%;
+    --sidebar-primary: 270 70% 60%; 
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 320 75% 60%; 
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 285 50% 90%;
+    --sidebar-ring: 270 70% 65%;
+
+    /* Chart colors, light theme */
+    --chart-1: 270 70% 60%; 
+    --chart-2: 285 68% 58%; 
+    --chart-3: 320 75% 60%; 
+    --chart-4: 300 70% 55%; 
+    --chart-5: 255 65% 65%; 
+  }
+
+  .dark {
+    /* Dark Theme based on screenshot - Dark blues, indigo, purples */
+    --background: 220 20% 7%; /* Very Dark Desaturated Blue/Almost Black */
+    --foreground: 220 15% 90%; /* Light Gray/Off-White */
+
+    --muted: 220 15% 12%; /* Darker Muted Blue/Gray */
+    --muted-foreground: 220 15% 60%; /* Muted Gray Text */
+
+    --popover: 220 20% 9%; /* Dark Popover Background */
+    --popover-foreground: 220 15% 90%; /* Light Text for Popover */
+
+    --card: 230 20% 10%; /* Dark Blue/Purple Card Background */
+    --card-foreground: 220 15% 90%; /* Light Text for Card */
+
+    --border: 230 20% 18%; /* Subtle Dark Border */
+    --input: 230 20% 18%;  /* Dark Input Background */
+
+    --primary: 240 60% 60%; /* Vibrant Indigo/Blue */
+    --primary-foreground: 220 10% 95%; /* Light text on primary */
+
+    --secondary: 250 40% 25%; /* Darker Muted Purple/Blue for secondary elements */
+    --secondary-foreground: 230 30% 85%; /* Lighter text for on-secondary */
+
+    --accent: 260 70% 65%; /* Vibrant Purple as accent */
+    --accent-foreground: 220 10% 95%; /* Light text on accent */
+    
+    --destructive: 0 65% 55%; /* Dark mode destructive */
+    --destructive-foreground: 0 0% 95%;
+
+    --ring: 240 60% 65%; /* Ring color based on primary */
+
+    /* Sidebar variables for dark mode, matching new theme */
+    --sidebar-background: 220 20% 9%;
+    --sidebar-foreground: 220 15% 90%;
+    --sidebar-primary: 240 60% 60%; 
+    --sidebar-primary-foreground: 220 10% 95%;
+    --sidebar-accent: 260 70% 65%; 
+    --sidebar-accent-foreground: 220 10% 95%;
+    --sidebar-border: 230 20% 18%;
+    --sidebar-ring: 240 60% 65%;
+    
+    /* Chart colors, updated for dark mode */
+    --chart-1: 240 60% 60%; /* Primary */
+    --chart-2: 260 70% 65%; /* Accent */
+    --chart-3: 220 50% 55%; /* Muted Blue */
+    --chart-4: 280 60% 60%; /* Another Purple */
+    --chart-5: 200 60% 50%; /* Teal/Cyan like */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
